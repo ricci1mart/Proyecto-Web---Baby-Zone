@@ -1,0 +1,724 @@
+/* Estilos básicos para Baby Zone - Estilo principiante pero funcional */
+
+/* Fuente personalizada desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos para tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilos para encabezados */
+h1, h2, h3 {
+    font-family: 'Fredoka', Arial, sans-serif;
+    color: #ff6a00;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Header superior */
+header table {
+    background-color: #ffffff;
+}
+
+header font {
+    font-size: 14px;
+}
+
+/* Navegación */
+nav a {
+    text-decoration: none;
+    color: #ff6a00;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff8c42;
+    text-decoration: underline;
+}
+
+/* Menú grande */
+.menu-grande {
+    padding: 20px 0;
+    min-height: 90px;
+}
+
+.menu-link-grande {
+    font-size: 1.3rem !important;
+    padding: 12px 20px !important;
+    margin: 0 8px !important;
+}
+
+.btn-menu-grande {
+    font-size: 1.3rem !important;
+    padding: 12px 20px !important;
+    min-width: 50px;
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-menu-grande.btn-primary {
+    font-size: 1.2rem !important;
+    padding: 14px 24px !important;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .menu-link-grande {
+        font-size: 1.1rem !important;
+        padding: 10px 15px !important;
+    }
+    
+    .btn-menu-grande {
+        font-size: 1.1rem !important;
+        padding: 10px 15px !important;
+    }
+}
+
+/* Botones */
+button {
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Comic Neue', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ANIMACIÓN 1: Hover en botones con efecto de elevación y cambio de color */
+@keyframes botonHover {
+    0% {
+        background-color: #ff6a00;
+        transform: translateY(0);
+    }
+    100% {
+        background-color: #ff8c42;
+        transform: translateY(-3px);
+    }
+}
+
+button:hover {
+    animation: botonHover 0.3s ease forwards;
+}
+
+/* ANIMACIÓN 2: Fade-in para productos al cargar la página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.producto {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.producto:nth-child(1) { animation-delay: 0.1s; }
+.producto:nth-child(2) { animation-delay: 0.2s; }
+.producto:nth-child(3) { animation-delay: 0.3s; }
+.producto:nth-child(4) { animation-delay: 0.4s; }
+
+/* ANIMACIÓN 3: Pulse en el logo al cargar */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.logo-animado {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ANIMACIÓN 4: Slide y cambio de color en categorías al hover */
+@keyframes slideCategoria {
+    0% {
+        transform: translateX(0);
+        background-color: #ffffff;
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+        background-color: #fff5e6;
+    }
+}
+
+.categoria:hover {
+    animation: slideCategoria 0.5s ease forwards;
+    cursor: pointer;
+}
+
+/* ANIMACIÓN 5: Bounce en ofertas especiales */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.oferta-destacada {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Formularios */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Comic Neue', Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff6a00;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Hero section */
+.hero-section {
+    color: white;
+    overflow: hidden;
+}
+
+.hero-background {
+    background: linear-gradient(135deg, #ff6a00 0%, #ff8c42 50%, #ff6a00 100%);
+    position: relative;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.min-vh-50 {
+    min-height: 60vh;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+}
+
+.hero-text {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.hero-title {
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    color: white;
+    font-weight: 500;
+}
+
+.hero-btn {
+    background-color: #ffffff;
+    color: #ff6a00;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-btn:hover {
+    background-color: #fff5e6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    animation: fadeInRight 1s ease-out;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .min-vh-50 {
+        min-height: auto;
+    }
+}
+
+/* Productos */
+.producto-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.producto-item:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+}
+
+.card-img-wrapper {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-wrapper {
+    transform: scale(1.05);
+}
+
+/* Categorías mejoradas */
+.categoria-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.categoria-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+}
+
+.categoria-img-wrapper {
+    transition: transform 0.3s ease;
+}
+
+.categoria-card:hover .categoria-img-wrapper {
+    transform: scale(1.1);
+}
+
+/* Product cards mejoradas */
+.product-card {
+    border: 1px solid #e9ecef !important;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: #ff6a00 !important;
+    box-shadow: 0 10px 30px rgba(255, 106, 0, 0.15) !important;
+}
+
+/* Badges mejorados */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4em 0.6em;
+    font-weight: 600;
+}
+
+/* Barra superior morada */
+.barra-superior {
+    background-color: #8B5CF6 !important;
+    color: white;
+}
+
+.barra-superior .text-white {
+    color: white !important;
+}
+
+/* Footer mejorado */
+footer a:hover {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.hover-footer {
+    transition: all 0.3s ease;
+    color: #ff6a00 !important;
+}
+
+.hover-footer:hover {
+    color: white !important;
+    padding-left: 5px;
+}
+
+footer .btn-outline-light:hover {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    transform: translateY(-3px);
+}
+
+footer img {
+    transition: opacity 0.3s ease;
+}
+
+footer img:hover {
+    opacity: 1 !important;
+}
+
+/* Botón morado para añadir al carrito */
+.btn-morado {
+    background-color: #8B5CF6;
+    border-color: #8B5CF6;
+    color: white;
+}
+
+.btn-morado:hover {
+    background-color: #7C3AED;
+    border-color: #7C3AED;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
+}
+
+.btn-morado:active {
+    background-color: #6D28D9;
+    border-color: #6D28D9;
+    transform: translateY(0);
+}
+
+.precio {
+    color: #ff6a00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.precio-tachado {
+    color: #777;
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Carrito */
+.carrito-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Formulario de pago */
+.formulario-pago {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Botones de acción */
+.btn-comprar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.btn-comprar:hover {
+    background-color: #45a049;
+}
+
+.btn-seguir {
+    background-color: #666;
+    color: white;
+}
+
+.btn-seguir:hover {
+    background-color: #777;
+}
+
+/* Sección de ofertas (banner con imagen) */
+.ofertas-header {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('dist/imagenes/banner_ofertas.jpg') center/cover no-repeat !important;
+    color: white;
+    text-align: center;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+}
+
+.ofertas-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.08), transparent 40%);
+    pointer-events: none;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.border-orange {
+    border-color: #ff6a00 !important;
+}
+
+/* Footer morado oscuro */
+.bg-morado-footer {
+    background-color: #4C1D95 !important;
+}
+
+/* Testimonios */
+.testimonio {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border-left: 4px solid #ff6a00;
+}
+
+/* Secciones de confianza */
+.confianza-item {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive básico */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 50px;
+    }
+}
+
+/* Mejoras de accesibilidad */
+a:focus,
+button:focus {
+    outline: 3px solid #ff6a00;
+    outline-offset: 2px;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animación fadeOut para mensajes */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Clase de color naranja para Bootstrap */
+.text-orange {
+    color: #ff6a00 !important;
+}
+
+/* Override de Bootstrap para mantener colores personalizados */
+.btn-primary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c42;
+    border-color: #ff8c42;
+}
+

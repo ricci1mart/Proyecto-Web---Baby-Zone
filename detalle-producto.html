@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Martin Abarca">
+    <meta name="description" content="Zapatitos algodón - Baby Zone: zapatitos, zapatillas y accesorios para bebés.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatitos Algodón - Baby Zone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body bgcolor="#f5f5f5">
+
+    <!-- BARRA ARRIBA -->
+    <header>
+        <div class="container-fluid barra-superior d-none d-md-block">
+            <div class="row py-2">
+                <div class="col-md-6 text-start">
+                    <small class="text-white">📧 babyzone@gmail.com | 📍 Encuéntranos</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small class="text-white">📞 +51 94567988 | Español | PEN</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white menu-grande">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index miweb.html">
+                    <img src="dist/imagenes/logo_babyzone.png" width="180px" alt="Logo Baby Zone" class="logo-animado"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-orange menu-link-grande" href="index miweb.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-orange menu-link-grande" href="index miweb.html#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-orange menu-link-grande" href="index miweb.html#categorias">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-orange menu-link-grande" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-orange menu-link-grande" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-outline-secondary btn-menu-grande" aria-label="Buscar">🔍</button>
+                    <button class="btn btn-outline-secondary btn-menu-grande" aria-label="Mi cuenta">👤</button>
+                    <a href="carrito1.html" class="btn btn-outline-secondary btn-menu-grande" aria-label="Carrito">🛒</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- DETALLES DEL PRODUCTO -->
+    <section class="py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index miweb.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index miweb.html#productos">Productos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Zapatitos Algodón</li>
+                </ol>
+            </nav>
+
+            <div class="row g-4">
+                <!-- IMAGEN DEL PRODUCTO -->
+                <div class="col-12 col-md-6">
+                    <div class="product-image-wrapper bg-white p-4 rounded shadow-sm">
+                        <img src="dist/imagenes/prod1.png" class="img-fluid w-100" alt="Zapatitos algodón" style="max-height: 500px; object-fit: contain;">
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DEL PRODUCTO -->
+                <div class="col-12 col-md-6">
+                    <div class="product-info">
+                        <span class="badge bg-danger mb-3">-25% OFF</span>
+                        <h1 class="display-5 fw-bold mb-3">Zapatitos Algodón</h1>
+                        
+                        <div class="mb-3">
+                            <span class="text-decoration-line-through text-muted fs-5 me-2">S/ 79.90</span>
+                            <span class="text-orange fw-bold fs-2">S/ 59.90</span>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- TAMAÑO -->
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Tamaño:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline-secondary btn-talla" data-talla="0-3">0-3 meses</button>
+                                <button class="btn btn-outline-secondary btn-talla" data-talla="3-6">3-6 meses</button>
+                                <button class="btn btn-outline-secondary btn-talla active" data-talla="6-9">6-9 meses</button>
+                                <button class="btn btn-outline-secondary btn-talla" data-talla="9-12">9-12 meses</button>
+                                <button class="btn btn-outline-secondary btn-talla" data-talla="12-18">12-18 meses</button>
+                            </div>
+                        </div>
+
+                        <!-- COLORES -->
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Color:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline-secondary btn-color active" data-color="blanco" style="background-color: #ffffff; border: 2px solid #333;" title="Blanco"></button>
+                                <button class="btn btn-outline-secondary btn-color" data-color="rosa" style="background-color: #ffb6c1; border: 2px solid #333;" title="Rosa"></button>
+                                <button class="btn btn-outline-secondary btn-color" data-color="azul" style="background-color: #87ceeb; border: 2px solid #333;" title="Azul"></button>
+                                <button class="btn btn-outline-secondary btn-color" data-color="amarillo" style="background-color: #ffd700; border: 2px solid #333;" title="Amarillo"></button>
+                            </div>
+                        </div>
+
+                        <!-- MEDIDAS -->
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Medidas:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">📏 <strong>Largo:</strong> 8-12 cm (según talla)</li>
+                                <li class="mb-2">📏 <strong>Ancho:</strong> 4-6 cm (según talla)</li>
+                                <li class="mb-2">📏 <strong>Alto:</strong> 3-4 cm</li>
+                            </ul>
+                        </div>
+
+                        <!-- RESUMEN -->
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-3">Descripción:</h5>
+                            <p class="text-muted">
+                                Zapatitos de algodón suave y cómodos, perfectos para los primeros pasos de tu bebé. 
+                                Diseñados con materiales 100% naturales que permiten la transpiración y protegen 
+                                los delicados pies de tu pequeño. Ideales para uso diario en casa o para ocasiones especiales.
+                            </p>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2">✅ Material: 100% Algodón</li>
+                                <li class="mb-2">✅ Suela antideslizante</li>
+                                <li class="mb-2">✅ Lavable a mano</li>
+                                <li class="mb-2">✅ Sin costuras internas</li>
+                                <li class="mb-2">✅ Apto para piel sensible</li>
+                            </ul>
+                        </div>
+
+                        <!-- BOTÓN DE COMPRA -->
+                        <div class="d-grid gap-2">
+                            <a href="carrito1.html" class="btn btn-morado btn-lg py-3">
+                                🛒 Añadir al Carrito - S/ 59.90
+                            </a>
+                            <a href="ofertas.html" class="btn btn-outline-primary">
+                                Ver más productos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-morado-footer text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-4">
+                        <img src="dist/imagenes/logo_babyzone.png" width="150px" alt="Logo Baby Zone" class="mb-3">
+                        <h5 class="fw-bold mb-3">Baby Zone</h5>
+                        <p class="text-warning">Zapatitos, zapatillas y accesorios para bebés. Seguridad, ternura y estilo en cada detalle. Hacemos que los primeros pasos de tu bebé sean únicos.</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold mb-3">Síguenos en:</h6>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">📘</a>
+                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">📷</a>
+                            <a href="https://wa.me/51951426605" target="_blank" class="btn btn-outline-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">💬</a>
+                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">📧</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Enlaces Rápidos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index miweb.html" class="text-orange text-decoration-none hover-footer">Inicio</a></li>
+                        <li class="mb-2"><a href="index miweb.html#productos" class="text-orange text-decoration-none hover-footer">Productos</a></li>
+                        <li class="mb-2"><a href="index miweb.html#categorias" class="text-orange text-decoration-none hover-footer">Categorías</a></li>
+                        <li class="mb-2"><a href="ofertas.html" class="text-orange text-decoration-none hover-footer">Ofertas</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-orange text-decoration-none hover-footer">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Información</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Sobre nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Política de privacidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Términos y condiciones</a></li>
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Preguntas frecuentes</a></li>
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Política de envíos</a></li>
+                        <li class="mb-2"><a href="#" class="text-orange text-decoration-none hover-footer">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold mb-3">Contacto</h6>
+                    <ul class="list-unstyled text-white">
+                        <li class="mb-2 d-flex align-items-start">
+                            <span class="me-2">📧</span>
+                            <span>babyzone@gmail.com</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                            <span class="me-2">📞</span>
+                            <span>+51 94567988</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                            <span class="me-2">📍</span>
+                            <span>Lima, Perú</span>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                            <span class="me-2">🕒</span>
+                            <span>Lun-Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 2:00 PM</span>
+                        </li>
+                    </ul>
+                    <div class="mt-3">
+                        <h6 class="fw-bold mb-3">Newsletter</h6>
+                        <p class="text-muted small mb-2">Recibe ofertas exclusivas:</p>
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control form-control-sm" placeholder="Tu email" required>
+                            <button type="submit" class="btn btn-primary btn-sm">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary opacity-50">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white small">© 2025 Baby Zone. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <img src="dist/logos/visa.png" width="40" alt="Visa" class="opacity-75">
+                        <img src="dist/logos/mastercard.png" width="40" alt="MasterCard" class="opacity-75">
+                        <img src="dist/logos/amex.png" width="40" alt="Amex" class="opacity-75">
+                        <img src="dist/logos/diners.png" width="40" alt="Diners" class="opacity-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat WhatsApp Flotante -->
+    <a href="https://wa.me/51951426605?text=Hola%20Baby%20Zone,%20me%20gustaría%20obtener%20más%20información" 
+       target="_blank" 
+       class="whatsapp-float" 
+       aria-label="Chatea con nosotros en WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botonesTalla = document.querySelectorAll('.btn-talla');
+            const botonesColor = document.querySelectorAll('.btn-color');
+
+            botonesTalla.forEach(function(boton) {
+                boton.addEventListener('click', function() {
+                    botonesTalla.forEach(function(b) {
+                        b.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+
+            botonesColor.forEach(function(boton) {
+                boton.addEventListener('click', function() {
+                    botonesColor.forEach(function(b) {
+                        b.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+    <style>
+        .btn-talla.active {
+            background-color: #8B5CF6;
+            border-color: #8B5CF6;
+            color: white;
+        }
+
+        .btn-color {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding: 0;
+        }
+
+        .btn-color.active {
+            border-width: 3px !important;
+            transform: scale(1.1);
+        }
+
+        .product-image-wrapper {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</body>
+</html>
+
